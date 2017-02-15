@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Eriks Project &mdash; Case Study &amp; Effectiveness</title>
+    <style type="text/css">
+
+			body {
+				margin:0;
+				padding:0;
+				font-family: Sans-Serif;
+				line-height: 1.5em;
+			}
+
+			#header {
+				background: #ccc;
+
+			}
+
+			#header h1 {
+			    line-height: 1.5;
+				margin: 0;
+				padding-top: 15px;
+			}
+
+			main {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 100%;
+			}
+
+			#nav {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 230px;
+				margin-left: -100%;
+				background: #eee;
+			}
+
+			#footer {
+				clear: left;
+				width: 100%;
+				background: #ccc;
+				text-align: center;
+				padding: 4px 0;
+			}
+
+			#wrapper {
+				overflow: hidden;
+			}
+
+			#content {
+				margin-left: 230px; /* Same as 'nav' width */
+			}
+
+			.innertube {
+				margin: 15px; /* Padding for content */
+				margin-top: 0;
+			}
+
+			p {
+				color: #555;
+			}
+
+			nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			nav ul a {
+				color: darkgreen;
+				text-decoration: none;
+			}
+
+		</style>
+
+    <script type="text/javascript">
+
+        <div>
+        <h1 Why We Suck At Spelling</h1>
+        <p>Here see two things: First the see the level of difficulty based on the number of sounds. Next we have each
+            individual letter from the word you chose from</p>
+        <p>
+            <a class="btn btn-lg btn-success" role="button" href="http://google.com">Find Random Spelling</a>
+        </p>
+        </div>
+
+		</script>
+
+</head>
+
+<body>
+
+<header id="header">
+    <div class="innertube">
+        <h1>WHY WE SUCK AT SPELLING</h1>
+
+    </div>
+</header>
+
+<div id="wrapper">
+
+    <main>
+        <div id="content">
+            <div class="innertube">
+                <h1>Click a rord to see its letters and possibile spellings</h1>
+                <ul>
+
+                    {{#clickedWord}}
+
+                    <a style="font-size:30px;" href="/single/{{word}}">{{word}}</a>
+                    <br>
+
+                    {{/clickedWord}}
+                </ul>
+                <!-- Start Styles. Move the 'style' tags and everything between them to between the 'head' tags -->
+                <style type="text/css">
+.myTable { width:400px;background-color:#eee;border-collapse:collapse; }
+.myTable th { background-color:#000;color:white;width;50%; }
+.myTable td, .myTable th { padding:15px;border:20px solid #000; }
+</style>
+                <!-- End Styles -->
+                <table class="myTable">
+                    <tr>
+                        <th>Source</th><th>List</th>
+
+                    <tr>
+                        <td>Webster</td><td>Pronouciation Key</td>
+                    </tr>
+                    <tr>
+                        <td>Spring FrameWord</td><td>SQL Database</td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+        </div>
+    </main>
+
+    <nav id="nav">
+        <div class="innertube">
+            <h3>American English Orthography:
+                Study of Orthographical Structures and System Redundencies</h3>
+            <p>Here we have to story of American english. Just like the rest of our nations cultures, our words
+                are a melting pot. Like each written and spoken language, the words we use have developed on a long
+                journey. With unique origins, etmology, definitions, and usages, every word is more then what it seems.
+                And as English takes the stage to bring the world together hopefully it will unify mankind so we can build into the
+                sky. Yet its clear that for early learners and non-native speakers, the English rules make no sense.
+                And here is why.
+            </p>
+
+        </div>
+    </nav>
+
+</div>
+
+<footer id="footer">
+    <div class="innertube">
+        <p>Here We have Examples</p><marquee behavior="scroll" direction="left">Steaming List of words of some kind</marquee>
+
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="#">List</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active " href="#">Index</a>
+    </li>
+</footer>
+
+</body>
+</html>
+
+</html>

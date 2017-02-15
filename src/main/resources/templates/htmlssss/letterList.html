@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <div class="header-clearfix">
+        <nav>
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active " href="#">Index</a>
+                </li>
+            </ul>
+        </nav>
+        <h3 class="text-energy">English Orthography</h3>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-3">Why We Suck At Spelling</h1>
+        <p>Now we see that the letter shows up in a random list pulled in</p>
+        <p>
+            <a class="btn btn-lg btn-success" role="button" href="http://google.com">Find Random Spelling</a>
+        </p>
+    </div>
+    <div class="registration">
+        <h4>Here are the words that contain </h4>
+        {{#letterWordList}}
+
+        <ol>{{word}}</ol>
+
+        {{/letterWordList}}
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
