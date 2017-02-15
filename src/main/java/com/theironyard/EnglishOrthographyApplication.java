@@ -12,5 +12,6 @@ public class EnglishOrthographyApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(EnglishOrthographyApplication.class, args);
+
 	}
 }

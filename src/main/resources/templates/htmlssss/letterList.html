@@ -1,46 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-<div class="container">
-    <div class="header-clearfix">
-        <nav>
-            <ul class="nav nav-pills float-right">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">List</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active " href="#">Index</a>
-                </li>
-            </ul>
-        </nav>
-        <h3 class="text-energy">English Orthography</h3>
-    </div>
-    <div class="jumbotron">
-        <h1 class="display-3">Why We Suck At Spelling</h1>
-        <p>Now we see that the letter shows up in a random list pulled in</p>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Eriks Project &mdash; Case Study &amp; Effectiveness</title>
+    <style type="text/css">
+
+			body {
+				margin:0;
+				padding:0;
+				font-family: Sans-Serif;
+				line-height: 1.5em;
+			}
+
+			#header {
+				background: #ccc;
+
+			}
+
+			#header h1 {
+			    line-height: 1.5;
+				margin: 0;
+				padding-top: 15px;
+			}
+
+			main {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 100%;
+			}
+
+			#nav {
+				padding-bottom: 10010px;
+				margin-bottom: -10000px;
+				float: left;
+				width: 230px;
+				margin-left: -100%;
+				background: #eee;
+			}
+
+			#footer {
+				clear: left;
+				width: 100%;
+				background: #ccc;
+				text-align: center;
+				padding: 4px 0;
+			}
+
+			#wrapper {
+				overflow: hidden;
+			}
+
+			#content {
+				margin-left: 230px; /* Same as 'nav' width */
+			}
+
+			.innertube {
+				margin: 15px; /* Padding for content */
+				margin-top: 0;
+			}
+
+			p {
+				color: #555;
+			}
+
+			nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			nav ul a {
+				color: darkgreen;
+				text-decoration: none;
+			}
+
+		</style>
+
+    <script type="text/javascript">
+
+        <div>
+        <h1 Why We Suck At Spelling</h1>
+        <p>Here see two things: First the see the level of difficulty based on the number of sounds. Next we have each
+            individual letter from the word you chose from</p>
         <p>
             <a class="btn btn-lg btn-success" role="button" href="http://google.com">Find Random Spelling</a>
         </p>
-    </div>
-    <div class="registration">
-        <h4>Here are the words that contain </h4>
-        {{#letterWordList}}
+        </div>
 
-        <ol>{{word}}</ol>
+		</script>
 
-        {{/letterWordList}}
+</head>
+
+<body>
+
+<header id="header">
+    <div class="innertube">
+        <h1>WHY WE SUCK AT SPELLING</h1>
+
     </div>
+</header>
+
+<div id="wrapper">
+
+    <main>
+        <div id="content">
+            <div class="innertube">
+                <h1>Here are the words contained in letter</h1>
+                <ul>
+
+                        {{#letterWordList}}
+
+                        <ol>{{word}}</ol>
+
+                        {{/letterWordList}}
+
+                </ul>
+                <!-- Start Styles. Move the 'style' tags and everything between them to between the 'head' tags -->
+                <style type="text/css">
+.myTable { width:400px;background-color:#eee;border-collapse:collapse; }
+.myTable th { background-color:#000;color:white;width;50%; }
+.myTable td, .myTable th { padding:15px;border:20px solid #000; }
+</style>
+                <!-- End Styles -->
+                <table class="myTable">
+                    <tr>
+                        <th>Source</th><th>List</th>
+
+                    <tr>
+                        <td>Webster</td><td>Pronouciation Key</td>
+                    </tr>
+                    <tr>
+                        <td>Spring FrameWord</td><td>SQL Database</td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+        </div>
+    </main>
+
+    <nav id="nav">
+        <div class="innertube">
+            <h3>American English Orthography:
+                Study of Orthographical Structures and System Redundencies</h3>
+            <p>This page it just to high light that once we tranlsate, we see words where the letter appears
+            </p>
+
+        </div>
+    </nav>
 
 </div>
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<script src="index.js"></script>
+
+<footer id="footer">
+    <div class="innertube">
+        <p>Here We have Examples</p><marquee behavior="scroll" direction="left">Steaming List of words of some kind</marquee>
+
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="#">List</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active " href="#">Index</a>
+    </li>
+</footer>
+
 </body>
+</html>
+
 </html>

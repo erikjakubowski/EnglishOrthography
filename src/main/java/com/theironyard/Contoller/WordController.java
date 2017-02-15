@@ -85,35 +85,35 @@ public class WordController {
         float toughness = dwd.length / 13f;
         model.addAttribute("toughness", toughness * 100);
 
+
+        int zzz = wor.size();
+        model.addAttribute("size", zzz);
+
+
         char[] s = word.toCharArray();
         model.addAttribute("letterClickedWord", s);
 
+
         wor =new ArrayList<>();
-
-
         String list = word1.getLocations();
+
+
 
         sorting(list,0,"");
 
 
+
+
         Collections.shuffle(wor);
-        List<String> wrdings = wor.subList(0,10);
-        model.addAttribute("comboPieces", wrdings );
 
+        List<String> wrdings= new ArrayList<>();
 
-
-
-
-
-
-
-
-        //errros dad, x clicked,
-
-
-
-
-
+        if (wor.size() < 10) {
+             wrdings = wor;
+        }else {
+            wrdings = wor.subList(0,10);
+        }
+        model.addAttribute("comboPieces", wrdings);
 
 
 
@@ -139,6 +139,7 @@ public class WordController {
         Collections.shuffle(here2);
         List<Word> huh = here2.subList(0, 10);
         model.addAttribute("letterWordList", huh);
+
 
 
         return "htmlssss/letterList";
