@@ -40,9 +40,28 @@ public class WordController {
 
     ArrayList<String> wor = new ArrayList<>();
 
+
+    public int counting (Word word) {
+
+        String nums = word.getLocations();
+        String [] spots = nums.split(",");
+
+        int back = 1;
+
+        for (String spot : spots) {
+            String spelling = indexing.findOne(Integer.parseInt(spot)).getValue();
+            String [] total = spelling.split(",");
+            back = total.length * back;
+
+        }
+        return back;
+
+
+    }
+
     public void sorting (String list, int pos, String currentString) {
 
-        String[] spot = list.split(",");
+        String [] spot = list.split(",");
         int loc = Integer.parseInt(spot[pos]);
         String spellings = indexing.findOne(loc).getValue();
         String [] spellingParts = spellings.split(",");
@@ -58,6 +77,8 @@ public class WordController {
         }
 
     }
+
+
 
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
@@ -81,13 +102,31 @@ public class WordController {
 
         Word word1 = words.findFirstByWord(word);
 
+        float toughness = counting(word1) / 1600000f;
         String[] dwd = word1.getLocations().split(",");
-        float toughness = dwd.length / 13f;
+
+
+
+
+        float difficulty = dwd.length / 15f;
+
+
+
+
+        model.addAttribute("difficulty", difficulty * 100);
+
+
+//        42,14,11,1,28,9,10,14,42,8,9,18;
+//        3,7,2,2,2,2,9,3,7,3,8,9,2
+        //9,9,8,7,7,3,3,3,2,2,2,2,2
+        //27,433,728 zygapophyseal  <a href == http://www.dictionary.com/browse/{{word}}> for any word. add button
+
+
+
+
+
+
         model.addAttribute("toughness", toughness * 100);
-
-
-        int zzz = wor.size();
-        model.addAttribute("size", zzz);
 
 
         char[] s = word.toCharArray();
@@ -101,7 +140,8 @@ public class WordController {
 
         sorting(list,0,"");
 
-
+        int zzz = wor.size();
+        model.addAttribute("size", zzz);
 
 
         Collections.shuffle(wor);
@@ -138,6 +178,14 @@ public class WordController {
         }
         Collections.shuffle(here2);
         List<Word> huh = here2.subList(0, 10);
+
+        if (here2.size()<10) {
+            huh = here2;
+
+        }else{
+            huh = here2.subList(0,10);
+        }
+
         model.addAttribute("letterWordList", huh);
 
 

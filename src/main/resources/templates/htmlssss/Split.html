@@ -54,6 +54,17 @@
 			#content {
 				margin-left: 230px; /* Same as 'nav' width */
 			}
+			.button {
+                display: inline-block;
+                width: 115px;
+                height: 25px;
+                background: #333333;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+             }
 
 			.innertube {
 				margin: 15px; /* Padding for content */
@@ -77,18 +88,7 @@
 
 		</style>
 
-    <script type="text/javascript">
 
-        <div>
-        <h1 Why We Suck At Spelling</h1>
-        <p>Here see two things: First the see the level of difficulty based on the number of sounds. Next we have each
-            individual letter from the word you chose from</p>
-        <p>
-            <a class="btn btn-lg btn-success" role="button" href="http://google.com">Find Random Spelling</a>
-        </p>
-        </div>
-
-		</script>
 
 </head>
 
@@ -96,8 +96,7 @@
 
 <header id="header">
     <div class="innertube">
-        <h1>American English Orthography:
-            Study of Orthographical Structures and System Redundencies</h1>
+        <h1>Why we REALLY suck at spelling</h1>
 
     </div>
 </header>
@@ -107,21 +106,27 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <h1>Can you intuitively pronounce these variations? Click on a letter if you want to the words is found in</h1>
-                   <h1>How hard is it to spell correctly</h1>
+                <h1>Can you intuitively pronounce these variations? </h1>
+                   <h1>How hard is {{word}} to spell?</h1>
                    <ul>
+                       {{#difficulty}}
+                       <p>Top {{difficulty}}% base on total index locations(or number of sounds). Highest being ZOOGEOGRAPHICALLY with 15 sounds pronounced
+                           and the lowest being UP with only 2! </p>
+                       {{/difficulty}}
 
 
                         {{#toughness}}
-                        <p> This word is in the top {{toughness}}% in difficulty!</p>
+                        <p> Top {{toughness}}% in toughness to spell based on permutation of cases relative to the list.
+                            The range being ZYGAPOPHYSEAL with 25,000,000 (3*7*2*2*2*2*9*3*7*3*8*9*2) to MUG with 2 (1*1*2)  !</p>
                             {{/toughness}}
+
 
                             {{#size}}
                          <p>This word currently has {{size}} technically correct othrolological spellings </p>
                             {{/size}}
 
                         <div class="registration">
-                        <h4>Click on a Letter Below</h4>
+                        <h4>Click on a Letter Below or button for dictionary {{word}} <a class="button"  href="https://www.merriam-webster.com/dictionary/{{word}}">{{word}}</a></h4>
                         {{#letterClickedWord}}
                         <a style="font-size:100px;" href="/key/{{.}}">{{.}}</a>
                         {{/letterClickedWord}}
