@@ -54,6 +54,17 @@
 			#content {
 				margin-left: 230px; /* Same as 'nav' width */
 			}
+			.button {
+                display: inline-block;
+                width: 115px;
+                height: 25px;
+                background: #333333;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+             }
 
 			.innertube {
 				margin: 15px; /* Padding for content */
@@ -84,7 +95,7 @@
 
 <header id="header">
     <div class="innertube">
-        <h1>WHY WE SUCK AT SPELLING</h1>
+        <h1>Why We Suck At Spelling</h1>
 
     </div>
 </header>
@@ -95,13 +106,13 @@
         <div id="content">
             <div class="innertube">
 
-                <h1>Here are the words contained in letter <a style = "font-size:70px;" >{{letter}}</a></h1>
+                <h1>Here are the words and variations containing <a style = "font-size:70px;" >{{letter}}</a> </h1><h4><a class="button"  href="/key/{{letter}}">Refresh List</a></h4>
 
                 <ul>
 
                         {{#letterWordList}}
 
-                        <ol><a style="font-size:35px;" >{{word}}</a></ol>
+                        <ol><a style="font-size:35px;" href="/single/{{word}}">{{word}}</a></ol>
 
                         {{/letterWordList}}
 
@@ -133,10 +144,9 @@
 
     <nav id="nav">
         <div class="innertube">
-            <h3>Origins</h3>
-            <p>Now we see the letter put back into place. These words all represent a history. The collection you see has over 20 origins!
-                Latin, Greek, Old German, Russian, French, and some not even classified by the dictonary I used. True story.
-                Here the letter, with other pieces again, regains its roots. Which come from all over the world.
+            <h3>Come see the Confusion</h3>
+            <p> Here we see a list of words from the Database. By pulling out words that contain that letter, you can see all
+                the instances where the letter shows up and how familiar you have to be with the word to know its sounds and spellings.
 
             </p>
 
@@ -146,15 +156,10 @@
 </div>
 
 <footer id="footer">
-    <div class="innertube">
-        <p>Here We have Examples</p><marquee behavior="scroll" direction="left">Steaming List of words of some kind</marquee>
-
-    </div>
     <li class="nav-item">
-        <a class="nav-link" href="#">List</a>
-    </li>
+        <a class="nav-link" href="https://www.merriam-webster.com/help/pronunciation-key">Prounciation Key</a>    </li>
     <li class="nav-item">
-        <a class="nav-link active " href="#">Index</a>
+        <a class="nav-link active " href="/">Home</a>
     </li>
 </footer>
 

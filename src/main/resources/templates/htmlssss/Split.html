@@ -96,7 +96,7 @@
 
 <header id="header">
     <div class="innertube">
-        <h1>Why we REALLY suck at spelling</h1>
+        <h1>Lets Re-Build Babel</h1>
 
     </div>
 </header>
@@ -106,17 +106,16 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <h1>Can you intuitively pronounce these variations? </h1>
                    <h1>How hard is {{word}} to spell?</h1>
                    <ul>
                        {{#difficulty}}
-                       <p>Top {{difficulty}}% base on total index locations(or number of sounds). Highest being ZOOGEOGRAPHICALLY with 15 sounds pronounced
+                       <p>In the {{difficulty}}% percentile for amount of sounds. Adding up index locations(or number of sounds). Highest being ZOOGEOGRAPHICALLY with 15 sounds pronounced
                            and the lowest being UP with only 2! </p>
                        {{/difficulty}}
 
 
                         {{#toughness}}
-                        <p> Top {{toughness}}% in toughness to spell based on permutation of cases relative to the list.
+                        <p> In the {{toughness}}% percentile in toughness to spell. Based on permutation of cases.
                             The range being ZYGAPOPHYSEAL with 25,000,000 (3*7*2*2*2*2*9*3*7*3*8*9*2) to MUG with 2 (1*1*2)  !</p>
                             {{/toughness}}
 
@@ -126,7 +125,8 @@
                             {{/size}}
 
                         <div class="registration">
-                        <h4>Click on a Letter Below or button for dictionary {{word}} <a class="button"  href="https://www.merriam-webster.com/dictionary/{{word}}">{{word}}</a></h4>
+                        <h4>Press a button: Look up {{word}} in dictionary, refresh combination list, or click a letter in {{word}} <a class="button"  href="https://www.merriam-webster.com/dictionary/{{word}}">{{word}}</a><a class="button"  href="/single/{{word}}">Refresh List</a></h4>
+                            <h1>Can you intuitively pronounce these variations? </h1>
                         {{#letterClickedWord}}
                         <a style="font-size:100px;" href="/key/{{.}}">{{.}}</a>
                         {{/letterClickedWord}}
@@ -162,11 +162,13 @@
     </main>
     <nav id="nav">
         <div class="innertube">
-            <h3>Why its really that hard</h3>
-            <p>The word you clicked had to go through a few steps to get here. First it needed to be sounded out. Next each
-                vowel and consanent combinations had to be tied to the specific sound. From there each combinations was
-                classified under its pronounciation. After this happened with each word in the Database, we had proof of EVERY combinations sound.
-                Then it was a matter of replacing combination with a different one, that was proven to be equvilant.
+            <h3>BABEL: Language Barriers</h3>
+            <p> The Story of Babel is the tale that at one time all humanity spoke one language. And because of that,
+                mankind built a tower to the heavens. Because of that we were "“If as one people speaking the same language
+                they have begun to do this, then nothing they plan to do will be impossible for them. Come, let us go down and confuse their language so they will not understand each other.”"
+                The collection you see has over 20 origins! Latin, Greek, Old German, Russian, and French.
+                My hope, is that one day, mankind agains unifies under one language, and builds into the sky.
+
             </p>
 
         </div>
@@ -175,14 +177,10 @@
 </div>
 
 <footer id="footer">
-    <div class="innertube">
-        <p>Here We have Examples</p><marquee behavior="scroll" direction="left">Steaming List of words of some kind</marquee>
-    </div>
     <li class="nav-item">
-        <a class="nav-link" href="#">List</a>
-    </li>
+        <a class="nav-link" href="https://www.merriam-webster.com/help/pronunciation-key">Prounciation Key</a>    </li>
     <li class="nav-item">
-        <a class="nav-link active " href="#">Index</a>
+        <a class="nav-link active " href="/">Home</a>
     </li>
 </footer>
 

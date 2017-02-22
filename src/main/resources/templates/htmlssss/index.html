@@ -54,6 +54,17 @@
 			#content {
 				margin-left: 230px; /* Same as 'nav' width */
 			}
+			.button {
+                display: inline-block;
+                width: 115px;
+                height: 25px;
+                background: #333333;
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+             }
 
 
 			.innertube {
@@ -85,7 +96,7 @@
 
 <header id="header">
     <div class="innertube">
-        <h1>WHY WE SUCK AT SPELLING</h1>
+        <h1>Why We Suck At Spelling</h1>
 
     </div>
 </header>
@@ -95,12 +106,12 @@
     <main>
         <div id="content">
             <div class="innertube">
-                <h1>Click a word or refresh to see ten different words</h1>
+                <h1>Click a word or refresh to see ten different words </h1><span><a class="button"  href="/">Refresh List</a></span>
                 <ul>
 
                     {{#clickedWord}}
 
-                    <a style="font-size:30px;" href="/single/{{word}}">{{word}}</a>
+                    <a style="font-size:40px;" href="/single/{{word}}">{{word}}</a>
                     <br>
 
                     {{/clickedWord}}
@@ -133,13 +144,10 @@
     <nav id="nav">
         <div class="innertube">
             <h3>American English Orthography:
-                Study of Orthographical Structures and System Redundencies</h3>
+                Study of Orthography & System Redundencies</h3>
             <p>Here we have to story of American english. Just like the rest of our nations cultures, our words
                 are a melting pot. Like each written and spoken language, the words we use have developed on a long
-                journey. With unique origins, etmology, definitions, and usages, every word is more then what it seems.
-                And as English takes the stage to bring the world together hopefully it will unify mankind so we can build into the
-                sky. Yet its clear that for early learners and non-native speakers, the English rules make no sense.
-                And here is why.
+                journey. Which is why its clear that for early learners and non-native speakers, the English rules make no sense.
             </p>
 
         </div>
@@ -148,15 +156,10 @@
 </div>
 
 <footer id="footer">
-    <div class="innertube">
-        <p>Here We have Examples</p><marquee behavior="scroll" direction="left">Steaming List of words of some kind</marquee>
-
-    </div>
     <li class="nav-item">
-        <a class="nav-link" href="#">List</a>
+        <a class="nav-link" href="https://www.merriam-webster.com/help/pronunciation-key">Prounciation Key</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active " href="#">Index</a>
     </li>
 </footer>
 
